@@ -30,7 +30,8 @@ var cache = cache || {}
 	 */
 	cache = {
 		/**
-		 * @var		storage	the storage object
+		 * The storage object.
+		 * @var		storage mixed
 		 */
 		storage: 0,
 
@@ -113,6 +114,12 @@ var cache = cache || {}
 	 * A notification system.
 	 * Only webkit support at the moment.
 	 *
+	 * Use this:
+	 * if (typeof(w.webkitNotifications) != 'undefined') window.webkitNotifications.requestPermission(function() {
+	 * 	new notification('img.png', 'test', 'test', 1000)
+	 * })
+	 * Webkit limitation: It must be initiated _in_ a user action handler, like a link click or something like that!
+	 *
 	 * new notification()
 	 *
 	 * Must be initiated for every use.
@@ -137,22 +144,27 @@ var cache = cache || {}
 		constructor: notification,
 
 		/**
+		 * The URL.
 		 * @var		url		string
 		 */
 		url: '',
 		/**
+		 * The title.
 		 * @var		title		string
 		 */
 		title: '',
 		/**
+		 * The content of the notification. Can be HTML.
 		 * @var		content		string
 		 */
 		content: '',
 		/**
+		 * How long it should displayed.
 		 * @var		howLong		int
 		 */
 		howLong: 0,
 		/**
+		 * The notification object.
 		 * @var		notifications	mixed
 		 */
 		notifications: window.webkitNotifications || '',
@@ -224,6 +236,7 @@ var cache = cache || {}
 		constructor: dates,
 
 		/**
+		 * The date object.
 		 * @var		date	mixed
 		 */
 		date: 0,
