@@ -1,16 +1,20 @@
 /*
  * Usefull utlities for your next project.
  *
- * @author Jacob Groß <kurtextrem@gmail.com>
- * @package JSUtilities
+ * @author	Jacob Groß <kurtextrem@gmail.com>
+ * @package	JSUtilities
+ * @version	1.0
  */
 
+/**
+ * Global namespace
+ */
 var cache = cache || {}
 , dates = dates || {}
 , notification = notification || {}
 
 
-!function(){
+!function() {
 	"use strict"; // jshint ;_;
 
 	/**
