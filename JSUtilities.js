@@ -226,8 +226,10 @@ var cache = cache || {}
 	 * @return	mixed
 	 */
 	dates = function(tc) {
-		if (tc) return this.date = new Date(tc)
-		return this.date = new Date()
+		if (tc) 
+			this.date = new Date(tc)
+		else
+			this.date = new Date()
 	}
 	dates.prototype = {
 		/**
